@@ -4,6 +4,9 @@ import { webtable } from '../object-repositories/WebTablePage';
 import { brokenLinkImage } from '../object-repositories/BrokenLinkImagePage';
 import { widgets } from '../object-repositories/WidgetsPage';
 import { progressBar } from '../object-repositories/ProgressBarPage';
+import { toolTip } from '../object-repositories/ToolTipPage';
+import { interactions } from '../object-repositories/InteractionsPage';
+import { dragDrop } from '../object-repositories/DroppablePage';
 
 export function getHomeElementsCardText() {
     return home.card.elements;
@@ -15,6 +18,10 @@ export function getHomeFormCardText() {
 
 export function getHomeWidgetsCardText() {
     return home.card.widgets;
+}
+
+export function getHomeInteractionsCardText() {
+    return home.card.interactions;
 }
 
 export function getElementsWebTableMenuText() {
@@ -31,6 +38,10 @@ export function getBrokenImageObject() {
 
 export function getWidgetsProgressBarMenuText() {
     return widgets.menu.progressBar;
+}
+
+export function getWidgetsToolTipText() {
+    return widgets.menu.toolTip;
 }
 
 export function getTableFirstNameObject(rowNum: any) {    
@@ -185,4 +196,32 @@ export function getProgressBarElement() {
 
 export function getProgressBarCssValue() {
     return progressBar.cssValue.bgColor;
+}
+
+export function getToolTipButton() {
+    return toolTip.button;
+}
+
+export function getToolTipInfo() {
+    return toolTip.toolTipInfo;
+}
+
+export function getInteractionsDroppableMenuText() {
+    return interactions.menu.droppable;
+}
+
+export function getDroppableHoverObject() {
+    return dragDrop.droppable.hover;
+}
+
+export function getDraggableHoverObject() {
+    return dragDrop.draggable.hover;
+}
+
+export function getDroppableTextObject() {
+    return dragDrop.droppable.text;
+}
+
+export function getDroppableCssColorValue() {
+    return dragDrop.droppable.cssColorValue;
 }

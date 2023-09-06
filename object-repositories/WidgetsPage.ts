@@ -1,7 +1,8 @@
 export const widgets = {
 
     menu: {
-        progressBar: "Progress Bar"
+        progressBar: "Progress Bar",
+        toolTip: "Tool Tips"
     }
 
 

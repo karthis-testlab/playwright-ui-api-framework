@@ -3,7 +3,8 @@ export const home = {
     card: {
         elements: "Elements",
         form: "Forms",
-        widgets: "Widgets"
+        widgets: "Widgets",
+        interactions: "Interactions"
     }
 
 }
