@@ -1,13 +1,36 @@
 import { home } from '../object-repositories/HomePage';
 import { elements } from '../object-repositories/ElementsPage';
 import { webtable } from '../object-repositories/WebTablePage';
+import { brokenLinkImage } from '../object-repositories/BrokenLinkImagePage';
+import { widgets } from '../object-repositories/WidgetsPage';
+import { progressBar } from '../object-repositories/ProgressBarPage';
 
 export function getHomeElementsCardText() {
     return home.card.elements;
 }
 
+export function getHomeFormCardText() {
+    return home.card.form;
+}
+
+export function getHomeWidgetsCardText() {
+    return home.card.widgets;
+}
+
 export function getElementsWebTableMenuText() {
     return elements.menu.webTables;
+}
+
+export function getElementsBrokenLinkImageText() {
+    return elements.menu.brokenLinkImage;
+}
+
+export function getBrokenImageObject() {
+    return brokenLinkImage.broken.image;
+}
+
+export function getWidgetsProgressBarMenuText() {
+    return widgets.menu.progressBar;
 }
 
 export function getTableFirstNameObject(rowNum: any) {    
@@ -138,4 +161,28 @@ export function getRegistrationFormSalaryObject() {
 
 export function getRegistrationFormDepartmentObject() {
     return webtable.registration_form.department;
+}
+
+export function getProgressBarStartButton() {
+    return progressBar.button.start;    
+}
+
+export function getProgressBarStopText() {
+    return progressBar.button.stop;    
+}
+
+export function getProgressBarResetText() {
+    return progressBar.button.reset;
+}
+
+export function getProgressBarCompleteText() {
+    return progressBar.button.complete; 
+}
+
+export function getProgressBarElement() {
+    return progressBar.elements.progress_bar;
+}
+
+export function getProgressBarCssValue() {
+    return progressBar.cssValue.bgColor;
 }

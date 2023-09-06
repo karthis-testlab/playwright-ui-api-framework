@@ -11,6 +11,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './e2e',
+  snapshotDir: './images',
   /* Run tests in files in parallel */
   fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -29,7 +30,7 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
-    headless: false
+    headless: false    
   },
 
   /* Configure projects for major browsers */
@@ -69,6 +70,10 @@ export default defineConfig({
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
   ],
+
+  expect: {
+    timeout: 60 * 1000,
+  },
 
   /* Run your local dev server before starting the tests */
   // webServer: {
