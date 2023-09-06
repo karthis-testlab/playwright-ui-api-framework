@@ -26,7 +26,7 @@ test.beforeEach(async () => {
 
 });
 
-test('Scenario A - Verify user can enter new data into the table', async () => {
+test('@smoke Scenario A - Verify user can enter new data into the table', async () => {
     
     await webTablePage.clickAddButton();
     await webTablePage.enterFirstNameInRegistrationForm('Alden');

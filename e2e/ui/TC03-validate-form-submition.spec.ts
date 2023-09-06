@@ -60,7 +60,7 @@ test.use({
     viewport: { width: 400, height: 660 },
 });
 
-test('TC03 - Verify user can submit the form', async () => {
+test('@smoke TC03 - Verify user can submit the form', async () => {
 
     await formsPage.clickPracticeFormMenu();
     await practiceFormPage.enterName(firstName, lastName);
