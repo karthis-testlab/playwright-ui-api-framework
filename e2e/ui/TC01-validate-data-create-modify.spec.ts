@@ -1,7 +1,10 @@
 import { test, expect, Page } from '@playwright/test';
+import dotenv from 'dotenv';
 import { HomePage } from '../../pages/home-page';
 import { ElementsPage } from '../../pages/elements-page';
 import { WebTablePage } from '../../pages/webtable-page';
+
+dotenv.config();
 
 let page: Page;
 let homePage: HomePage;
@@ -12,7 +15,7 @@ test.beforeAll(async ({browser}) => {
 
     const context = await browser.newContext();
     page = await context.newPage();
-    await page.goto('https://demoqa.com/');
+    await page.goto(process.env.UI as string);
     homePage = new HomePage(page);
     elementsPage = new ElementsPage(page);
     await homePage.clickElementsCard();
@@ -45,7 +48,7 @@ test('@smoke Scenario A - Verify user can enter new data into the table', async 
 
 });
 
-test('Scenario B - Verify user can edit the row in a table', async () => {
+test('@smoke Scenario B - Verify user can edit the row in a table', async () => {
     
     await webTablePage.editFirstNameAndLastName("Alden", "Gerimedica", "BV");   
     await expect(webTablePage.extractEditedFirstNameInGrid()).toHaveText('Gerimedica');

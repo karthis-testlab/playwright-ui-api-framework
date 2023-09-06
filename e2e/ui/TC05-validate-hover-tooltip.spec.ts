@@ -1,7 +1,10 @@
 import { test, expect, Page } from '@playwright/test';
+import dotenv from 'dotenv';
 import { HomePage } from '../../pages/home-page';
 import { WidgetsPage } from '../../pages/widgets-page';
 import { ToolTipPage } from '../../pages/tool-tips-page';
+
+dotenv.config();
 
 let page: Page;
 let homePage: HomePage;
@@ -12,7 +15,7 @@ test.beforeAll(async ({ browser }) => {
 
     const context = await browser.newContext();
     page = await context.newPage();
-    await page.goto('https://demoqa.com/');
+    await page.goto(process.env.UI as string);
     homePage = new HomePage(page);
     await homePage.clickWidgetsCard();
 

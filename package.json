@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test:e2e:ui": "npx playwright test e2e/ui --project=chromium",
-    "test:smoke:ui": "npx playwright test e2e/ui --grep @smoke" 
+    "test:smoke:ui": "npx playwright test e2e/ui --grep @smoke"
   },
   "author": "Karthikeyan Rajendran",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.37.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
   }
 }
