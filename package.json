@@ -1,0 +1,12 @@
+{
+  "name": "karthikeyanrajendran-gm-assignment",
+  "version": "1.0.0",
+  "description": "Gerimedica Technical Round Assignment",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Karthikeyan Rajendran",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.37.1"
+  }
+}
