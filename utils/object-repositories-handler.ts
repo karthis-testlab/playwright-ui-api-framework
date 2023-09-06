@@ -7,6 +7,8 @@ import { progressBar } from '../object-repositories/ProgressBarPage';
 import { toolTip } from '../object-repositories/ToolTipPage';
 import { interactions } from '../object-repositories/InteractionsPage';
 import { dragDrop } from '../object-repositories/DroppablePage';
+import { forms } from '../object-repositories/FormsPage';
+import { practiceForm } from '../object-repositories/PracticeFormPage';
 
 export function getHomeElementsCardText() {
     return home.card.elements;
@@ -224,4 +226,132 @@ export function getDroppableTextObject() {
 
 export function getDroppableCssColorValue() {
     return dragDrop.droppable.cssColorValue;
+}
+
+export function getFormsPracticeFormMenuText() {
+    return forms.menu.practiceForm;
+}
+
+export function getPracticeFormFirstNameObject() {
+    return practiceForm.name.firstName;
+}
+
+export function getPracticeFormLastNameObject() {
+    return practiceForm.name.lastName;
+}
+
+export function getPracticeFormEmailObject() {
+    return practiceForm.email;
+}
+
+export function getPracticeFormMobileNumberObject() {
+    return practiceForm.mobile_number;
+}
+
+export function getPracticeFormMaleGenderObject() {
+    return practiceForm.gender.male;
+}
+
+export function getPracticeFormFemaleGenderObject() {
+    return practiceForm.gender.female;
+}
+
+export function getPracticeFormOtherGenderObject() {
+    return practiceForm.gender.other;
+}
+
+export function getPracticeFormDobInputFieldObject() {
+    return practiceForm.dob.inputField;
+}
+
+export function getPracticeFormDobMonthObject() {
+    return practiceForm.dob.month;
+}
+
+export function getPracticeFormDobYearObject() {
+    return practiceForm.dob.year;
+}
+
+export function getPracticeFormSubjectObject() {
+    return practiceForm.subject;
+}
+
+export function getPracticeFormSportsHobbyObject() {
+    return practiceForm.hobbies.sports;
+}
+
+export function getPracticeFormReadingHobbyObject() {
+    return practiceForm.hobbies.reading;
+}
+
+export function getPracticeFormMusicHobbyObject() {
+    return practiceForm.hobbies.music;
+}
+
+export function getPracticeFormPictureUploadObject() {
+    return practiceForm.picture_upload;
+}
+
+export function getPracticeFormCurrentAddressObject() {
+    return practiceForm.current_address;
+}
+
+export function getPracticeFormStateFieldObject() {
+    return practiceForm.state.stateField;
+}
+
+export function getPracticeFormStateInputObject() {
+    return practiceForm.state.input;
+}
+
+export function getPracticeFormCityFieldOject() {
+    return practiceForm.city.cityField;
+}
+
+export function getPracticeFormCityInputObject() {
+    return practiceForm.city.input;
+}
+
+export function getPracticeFormSubmitButtonObject() {
+    return practiceForm.submit;
+}
+
+export function getResultStudentName() {
+    return practiceForm.result.studentName;
+}
+
+export function getResultStudentEmail(){
+    return practiceForm.result.studentEmail;
+}
+
+export function getResultsGender() {
+    return practiceForm.result.gender;
+}
+
+export function getResultsDob() {
+    return practiceForm.result.dob;
+}
+
+export function getResultsMobile() {
+    return practiceForm.result.mobile;
+}
+
+export function getResultsSubjects() {
+    return practiceForm.result.subjects;
+}
+
+export function getResultsHobbies() {
+    return practiceForm.result.hobbies;
+}
+
+export function getResultsPicture() {
+    return practiceForm.result.picture;
+}
+
+export function getResultsAddress() {
+    return practiceForm.result.address;
+}
+
+export function getResultsStateAndCity() {
+    return practiceForm.result.stateCity;
 }
