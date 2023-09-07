@@ -4,6 +4,7 @@
   "description": "Gerimedica Technical Round Assignment",
   "main": "index.js",
   "scripts": {
+    "test": "npx playwright test --project=chromium",
     "test:e2e:ui": "npx playwright test e2e/ui --project=chromium",
     "test:smoke:ui": "npx playwright test e2e/ui --grep @smoke",
     "test:e2e:api": "npx playwright test e2e/api --project=chromium",
