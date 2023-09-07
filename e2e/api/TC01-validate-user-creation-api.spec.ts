@@ -18,7 +18,7 @@ test.beforeEach(async () => {
     httpMethod = new BaseMethodApi();
 });
 
-test.only('Scenario 1 - Validate user creation for the valid input', async () => {
+test('Scenario 1 - Validate user creation for the valid input', async () => {
 
     const data = {
         "userName": userName,
@@ -74,19 +74,10 @@ test('Scenario 3 - Validate error reponse for the existing user name', async () 
     
 });
 
-test.only('Scenario 4 - Validate created user available in the database', async () => {
-
-    const data = {
-        "userName": userName,
-        "password": password
-    }    
-
-    const generateToken = await httpMethod.postMethod(basePath, '/GenerateToken', data);
-
-    const authorizationHeader = await generateToken.json();
+test('Scenario 4 - Validate created user available in the database', async () => {
 
     const headers = {
-        "Authorization": "Bearer "+authorizationHeader.token
+        "Authorization": "Bearer "+await httpMethod.generateToken(userName, password)
     }
 
     const response = await httpMethod.getMethod(basePath, '/User/'+uuid, headers);
