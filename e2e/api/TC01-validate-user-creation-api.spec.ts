@@ -18,7 +18,7 @@ test.beforeEach(async () => {
     httpMethod = new BaseMethodApi();
 });
 
-test('Scenario 1 - Validate user creation for the valid input', async () => {
+test('@smoke Scenario 1 - Validate user creation for the valid input', async () => {
 
     const data = {
         "userName": userName,
@@ -38,7 +38,7 @@ test('Scenario 1 - Validate user creation for the valid input', async () => {
 
 });
 
-test('Scenario 2 - Validate error response for the wrong password criteria', async () => {
+test('@smoke Scenario 2 - Validate error response for the wrong password criteria', async () => {
 
     const data = {
         "userName": userName,
@@ -74,7 +74,7 @@ test('Scenario 3 - Validate error reponse for the existing user name', async () 
     
 });
 
-test('Scenario 4 - Validate created user available in the database', async () => {
+test('@smoke Scenario 4 - Validate created user available in the database', async () => {
 
     const headers = {
         "Authorization": "Bearer "+await httpMethod.generateToken(userName, password)

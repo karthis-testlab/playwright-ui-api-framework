@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test:e2e:ui": "npx playwright test e2e/ui --project=chromium",
-    "test:smoke:ui": "npx playwright test e2e/ui --grep @smoke"
+    "test:smoke:ui": "npx playwright test e2e/ui --grep @smoke",
+    "test:e2e:api": "npx playwright test e2e/api --project=chromium",
+    "test:smoke:api": "npx playwright test e2e/api --grep @smoke --project=chromium"
   },
   "author": "Karthikeyan Rajendran",
   "license": "ISC",

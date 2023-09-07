@@ -27,6 +27,15 @@ export class BaseMethodApi {
         return reponse;
     }
 
+    async deleteMethodWithHeader(basePath: string, resource: string, body: any, headers: any) {
+        const context = await request.newContext();
+        const reponse = await context.delete(basePath + resource, {
+            data: body,
+            headers: headers
+        });
+        return reponse;
+    }
+
     async generateToken(userName: string, password: string) {
         const data = {
             "userName": userName,
