@@ -4,10 +4,10 @@ As part of a technical round interview at Gerimedica, I created and wrote a test
 
 ### UI Testcases
 
-1. TC01 - Scenario A - Verify user can enter new data into the table (Smoke Test)
-2. TC01 - Scenario B - Verify user can edit the row in a table (Smoke Test)
+1. TC01 - Scenario A - Verify user can enter new data into the table **(Smoke Test)**
+2. TC01 - Scenario B - Verify user can edit the row in a table **(Smoke Test)**
 3. TC02 - Verify broken image
-4. TC03 - Verify user can submit the form. (Smoke Test)
+4. TC03 - Verify user can submit the form. **(Smoke Test)**
 5. TC04 - Verify the progress bar
 6. TC05 - Verify the tooltip
 7. TC06 - Verify user can drag and drop
@@ -15,15 +15,15 @@ As part of a technical round interview at Gerimedica, I created and wrote a test
 ### API Testcases
 
 1. TC01 - Creation of user account
-   - Scenario 1 - Validate user creation for the valid input (Smoke Test)
-   - Scenario 2 - Validate error response for the wrong password criteria (Smoke Test)
+   - Scenario 1 - Validate user creation for the valid input **(Smoke Test)**
+   - Scenario 2 - Validate error response for the wrong password criteria **(Smoke Test)**
    - Scenario 3 - Validate error reponse for the existing user name
-   - Scenario 4 - Validate created user available in the database (Smoke Test)
+   - Scenario 4 - Validate created user available in the database **(Smoke Test)**
   
 2. TC02 - Add a list of books and removed one of added books
-   - Scenario 1a - User able to add a lists of books into book store (Smoke Test)
+   - Scenario 1a - User able to add a lists of books into book store **(Smoke Test)**
    - Scenario 1b - Validate error response for the non existing isbn number
-   - Scenario 2a - User able to delete a already added book from the book store (Smoke Test)
+   - Scenario 2a - User able to delete a already added book from the book store **(Smoke Test)**
    - Scenario 2b - Validate error response for the non existing isbn number
 
 ### Dependencies npm package
