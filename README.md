@@ -9,6 +9,7 @@ As part of a technical round interview at Gerimedica, I created and wrote a test
 3. TC02 - Verify broken image
    - TC02a - Verify broken image using visual comparison
    - TC02b - Verify broken image using src attribute url
+   - TC02c - Verify the first broken image in the page
 4. TC03 - Verify user can submit the form. **(Smoke Test)**
 5. TC04 - Verify the progress bar
 6. TC05 - Verify the tooltip

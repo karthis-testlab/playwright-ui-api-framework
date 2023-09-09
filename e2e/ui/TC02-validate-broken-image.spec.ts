@@ -34,3 +34,8 @@ test('TC02b - Verify broken image using src attribute url', async () => {
     await elementsPage.clickBrokenLinkImageMenu();    
     expect(await brokenLinkImagePage.findBrokenImageBySrcAttribute()).toBe(404);
 });
+
+test('TC02c - Verify the first broken image in the page', async () => {
+    await elementsPage.clickBrokenLinkImageMenu();
+    expect(await brokenLinkImagePage.findFirstBrokenImageInThePage()).toBe(1);
+})
