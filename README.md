@@ -7,6 +7,8 @@ As part of a technical round interview at Gerimedica, I created and wrote a test
 1. TC01 - Scenario A - Verify user can enter new data into the table **(Smoke Test)**
 2. TC01 - Scenario B - Verify user can edit the row in a table **(Smoke Test)**
 3. TC02 - Verify broken image
+   - TC02a - Verify broken image using visual comparison
+   - TC02b - Verify broken image using src attribute url
 4. TC03 - Verify user can submit the form. **(Smoke Test)**
 5. TC04 - Verify the progress bar
 6. TC05 - Verify the tooltip

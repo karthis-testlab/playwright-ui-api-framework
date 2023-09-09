@@ -80,7 +80,7 @@ test('@smoke Scenario 4 - Validate created user available in the database', asyn
         "Authorization": "Bearer "+await httpMethod.generateToken(userName, password)
     }
 
-    const response = await httpMethod.getMethod(basePath, '/User/'+uuid, headers);
+    const response = await httpMethod.getMethodWithHeaders(basePath, '/User/'+uuid, headers);
 
     expect(response.status()).toBe(200);
     expect(response.statusText()).toBe('OK');

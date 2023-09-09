@@ -10,16 +10,16 @@ export class BaseMethodApi {
         return reponse;
     }
 
-    async postMethodWithHeader(basePath: string, resource: string, body: any, headers: any) {
+    async postMethodWithHeaders(basePath: string, resource: string, body: any, headers: any) {
         const context = await request.newContext();
         const reponse = await context.post(basePath + resource, {
             data: body,
             headers: headers
         });
         return reponse;
-    }
+    }    
 
-    async getMethod(basePath: string, resource: string, headers: any) {
+    async getMethodWithHeaders(basePath: string, resource: string, headers: any) {
         const context = await request.newContext();
         const reponse = await context.get(basePath + resource, {
             headers: headers
@@ -51,7 +51,7 @@ export class BaseMethodApi {
         const headers = {
             "Authorization": "Bearer "+await this.generateToken(userName, password)
         }
-        const response = await this.getMethod('/BookStore/v1', '/Books', headers);
+        const response = await this.getMethodWithHeaders('/BookStore/v1', '/Books', headers);
         const responseBody = await response.json();
         const books = responseBody.books;
         for(let index: number = 0;  index < limit; index++){
