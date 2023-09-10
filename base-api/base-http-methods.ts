@@ -2,7 +2,15 @@ import { request } from '@playwright/test';
 
 export class BaseMethodApi {
 
-    async postMethod(basePath: string, resource: string, body: any) {
+
+    public async postMethod(basePath: string, resource: string, body: any, headers?: any) {
+        if (typeof headers !== 'undefined') {
+            return this.postMethodWithHeaders(basePath, resource, body, headers);
+        }
+        return this.postMethodWithoutHeaders(basePath, resource, body);
+    }
+
+    private async postMethodWithoutHeaders(basePath: string, resource: string, body: any) {
         const context = await request.newContext();
         const reponse = await context.post(basePath + resource, {
             data: body
@@ -10,16 +18,16 @@ export class BaseMethodApi {
         return reponse;
     }
 
-    async postMethodWithHeaders(basePath: string, resource: string, body: any, headers: any) {
+    private async postMethodWithHeaders(basePath: string, resource: string, body: any, headers: any) {
         const context = await request.newContext();
         const reponse = await context.post(basePath + resource, {
             data: body,
             headers: headers
         });
         return reponse;
-    }    
+    }
 
-    async getMethodWithHeaders(basePath: string, resource: string, headers: any) {
+    async getMethod(basePath: string, resource: string, headers: any) {
         const context = await request.newContext();
         const reponse = await context.get(basePath + resource, {
             headers: headers
@@ -27,7 +35,7 @@ export class BaseMethodApi {
         return reponse;
     }
 
-    async deleteMethodWithHeader(basePath: string, resource: string, body: any, headers: any) {
+    async deleteMethod(basePath: string, resource: string, body: any, headers: any) {
         const context = await request.newContext();
         const reponse = await context.delete(basePath + resource, {
             data: body,
@@ -49,12 +57,12 @@ export class BaseMethodApi {
     async fetchListOfBooks(userName: string, password: string, limit: number) {
         let isbns: any = [];
         const headers = {
-            "Authorization": "Bearer "+await this.generateToken(userName, password)
+            "Authorization": "Bearer " + await this.generateToken(userName, password)
         }
-        const response = await this.getMethodWithHeaders('/BookStore/v1', '/Books', headers);
+        const response = await this.getMethod('/BookStore/v1', '/Books', headers);
         const responseBody = await response.json();
         const books = responseBody.books;
-        for(let index: number = 0;  index < limit; index++){
+        for (let index: number = 0; index < limit; index++) {
             isbns[index] = books[index].isbn;
         }
         return isbns;
@@ -64,7 +72,7 @@ export class BaseMethodApi {
         const data = {
             "userName": userName,
             "password": password
-        }    
+        }
         const response = await this.postMethod('/Account/v1', '/User', data);
         const responseBody = await response.json();
         return responseBody.userID;

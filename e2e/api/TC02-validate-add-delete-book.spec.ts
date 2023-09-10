@@ -39,7 +39,7 @@ test('@smoke Scenario 1a - User able to add a lists of books into book store', a
         "Authorization": "Bearer " + await httpMethod.generateToken(userName, password)
     }
 
-    const response = await httpMethod.postMethodWithHeaders(basePath, 'Books', data, headers);
+    const response = await httpMethod.postMethod(basePath, 'Books', data, headers);
 
     expect(response.status()).toBe(201);
     expect(response.statusText()).toBe('Created');
@@ -64,7 +64,7 @@ test('Scenario 1b - Validate error response for the non existing isbn number', a
         "Authorization": "Bearer " + await httpMethod.generateToken(userName, password)
     }
 
-    const response = await httpMethod.postMethodWithHeaders(basePath, 'Books', data, headers);
+    const response = await httpMethod.postMethod(basePath, 'Books', data, headers);
 
     expect(response.status()).toBe(400);
     expect(response.statusText()).toBe('Bad Request');
@@ -86,7 +86,7 @@ test("@smoke Scenario 2a - User able to delete a already added book from the boo
         "userId": uuid        
     }
 
-    const response = await httpMethod.deleteMethodWithHeader(basePath, 'Book', data, headers);
+    const response = await httpMethod.deleteMethod(basePath, 'Book', data, headers);
 
     expect(response.status()).toBe(204);
     expect(response.statusText()).toBe('No Content');
@@ -105,7 +105,7 @@ test("Scenario 2b - Validate error response for the non existing isbn number", a
         "userId": uuid        
     }
 
-    const response = await httpMethod.deleteMethodWithHeader(basePath, 'Book', data, headers);
+    const response = await httpMethod.deleteMethod(basePath, 'Book', data, headers);
 
     expect(response.status()).toBe(400);
     expect(response.statusText()).toBe('Bad Request');
