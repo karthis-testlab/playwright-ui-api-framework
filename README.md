@@ -41,38 +41,38 @@ As part of a technical round interview at Gerimedica, I created and wrote a test
 
 > First clone project repo using below mentioend link
 > 
-> git clone git@github.com:karthis-testlab/KarthikeyanRajendran-GM-Assignment.git (For SSH)
+> **git clone git@github.com:karthis-testlab/KarthikeyanRajendran-GM-Assignment.git** (For SSH)
 > 
-> git clone https://github.com/karthis-testlab/KarthikeyanRajendran-GM-Assignment.git (For HTTPS)
+> **git clone https://github.com/karthis-testlab/KarthikeyanRajendran-GM-Assignment.git** (For HTTPS)
 >
 > Sceond one run npm install command
 > 
-> npm i or npm install
+> **npm i or npm install**
 >
 > Once very got installed happy to run the test command
 > 
-> npm run test
+> **npm run test**
 > 
 
 ### Test Run Condition
 
-> npm run test
+> **npm run test**
 >
 > When running the above command in the CLI, both the UI and API test scripts will execute on the Chromium project.
 >
-> npm run test:e2e:ui
+> **npm run test:e2e:ui**
 >
 > When running the above command in the CLI, all the UI test scripts will execute on the Chromium project.
 >
-> npm run test:smoke:ui
+> **npm run test:smoke:ui**
 >
 > When running the above command in the CLI, @smoke tagged UI test scripts will execute on the all project like Chromium, Firefox and Webkit projects.
 >
-> npm run test:e2e:api
+> **npm run test:e2e:api**
 >
 > When running the above command in the CLI, all the API test scripts will execute on the Chromium project.
 >
-> npm run test:smoke:api
+> **npm run test:smoke:api**
 >
 > When running the above command in the CLI, @smoke tagged API test scripts will execute on the Chromium project.
 > 
