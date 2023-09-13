@@ -1,45 +1,45 @@
-## Gerimedica Assignment for Automating UI and API Tests
+## Automation Framework for both UI and API Tests using Playwright
 
-As part of a technical round interview at Gerimedica, I created and wrote a test framework and test scripts using the Playwright tool for both UI and API test cases.
+I created and wrote a test framework and test scripts using the Playwright tool for both UI and API test cases.
 
-### UI Testcases
+### UI Test cases
 
 1. TC01 - Scenario A - Verify user can enter new data into the table **(Smoke Test)**
 2. TC01 - Scenario B - Verify user can edit the row in a table **(Smoke Test)**
 3. TC02 - Verify broken image
    - TC02a - Verify broken image using visual comparison
-   - TC02b - Verify broken image using src attribute url
-   - TC02c - Verify the first broken image in the page
+   - TC02b - Verify broken image using src attribute URL
+   - TC02c - Verify the first broken image on the page
 4. TC03 - Verify user can submit the form. **(Smoke Test)**
 5. TC04 - Verify the progress bar
 6. TC05 - Verify the tooltip
 7. TC06 - Verify user can drag and drop
 
-### API Testcases
+### API Test cases
 
 1. TC01 - Creation of user account
    - Scenario 1 - Validate user creation for the valid input **(Smoke Test)**
    - Scenario 2 - Validate error response for the wrong password criteria **(Smoke Test)**
-   - Scenario 3 - Validate error reponse for the existing user name
+   - Scenario 3 - Validate error response for the existing user name
    - Scenario 4 - Validate created user available in the database **(Smoke Test)**
   
-2. TC02 - Add a list of books and removed one of added books
-   - Scenario 1a - User able to add a lists of books into book store **(Smoke Test)**
-   - Scenario 1b - Validate error response for the non existing isbn number
-   - Scenario 2a - User able to delete a already added book from the book store **(Smoke Test)**
-   - Scenario 2b - Validate error response for the non existing isbn number
+2. TC02 - Add a list of books and remove one of the added books
+   - Scenario 1a - User able to add a list of books into book store **(Smoke Test)**
+   - Scenario 1b - Validate error response for the non-existing ISBN number
+   - Scenario 2a - User able to delete an already added book from the book store **(Smoke Test)**
+   - Scenario 2b - Validate error response for the non-existing ISBN number
 
 ### Dependencies npm package
 
 | Package Name     | Version   | Purpose                                                                              |
 | :------------    | :-------: | :-------                                                                             |
-| @playwright/test | 1.37.1    | Playwright enables reliable end-to-end testing for modern web/api apps               |
+| @playwright/test | 1.37.1    | Playwright enables reliable end-to-end testing for modern Web/API apps               |
 | @faker-js/faker  | 8.0.2     | Generate massive amounts of fake (but realistic) data for testing and development    |
 | dotenv           | 16.3.1    | Dotenv is a zero-dependency module that loads environment variables from a .env file |
 
 ### Start to Dive
 
-> First clone project repo using below mentioend link
+> First clone project repo using below mentioned link
 > 
 > **git clone git@github.com:karthis-testlab/KarthikeyanRajendran-GM-Assignment.git** (For SSH)
 > 
@@ -66,7 +66,7 @@ As part of a technical round interview at Gerimedica, I created and wrote a test
 >
 > **npm run test:smoke:ui**
 >
-> When running the above command in the CLI, @smoke tagged UI test scripts will execute on the all project like Chromium, Firefox and Webkit projects.
+> When running the above command in the CLI, @smoke tagged UI test scripts will execute on all project like Chromium, Firefox and Webkit projects.
 >
 > **npm run test:e2e:api**
 >
@@ -133,5 +133,5 @@ KarthikeyanRajendran-GM-Assignment
 >
 > pages --> The 'pages' folder consists of various page classes that have relevant actions, designed based on the Page Object Model (POM).
 >
-> utils --> The 'utils' folder consist sets of functions that provide commonly used functionality or tools to make programming tasks easier. Here we have two libraries file. One is generating test data based on the need and another one is object repository helper which helps to fetch element from object repositories.
+> utils --> The 'utils' folder consists of sets of functions that provide commonly used functionality or tools to make programming tasks easier. Here we have two library files. One is generating test data based on the need and another one is object repository helper which helps to fetch elements from object repositories.
 > 
