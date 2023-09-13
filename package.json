@@ -1,7 +1,7 @@
 {
-  "name": "karthikeyanrajendran-gm-assignment",
+  "name": "playwright-ui-api",
   "version": "1.0.0",
-  "description": "Gerimedica Technical Round Assignment",
+  "description": "Trying to create the Automation framework for the both UI and API Tests using Playwright",
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test --project=chromium",
